@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ImageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return "ddfd";
-});
+Route::get('/', [ImageController::class, "show"]);
+Route::get('/create', [ImageController::class, "store"]);
+
+
