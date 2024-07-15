@@ -2,7 +2,7 @@
     <span class="icon">&equiv;</span>
     <ul>
 
-        <li class="lili"><a href="index.html">Home</a></li>
+        <li class="lili"><a href="/">Home</a></li>
         <li class="lili"><a href="/create">Create</a></li>
         <li class="lili"><a href="/image">Image</a></li>
         <li class="lili"><a href="/vedio">Vedios</a></li>

@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [ImageController::class, "show"]);
-Route::get('/create', [ImageController::class, "store"]);
+ 
+Route::post('/upload', [ImageController::class, "store"]);
+Route::get('/create', [ImageController::class, "index"]);
 
 

@@ -14,7 +14,11 @@
 <div class="upload">
     <p>
         Filename:
-        <input type="file" multiple="false" accept="image/*" id=finput onchange="upload()">
+        <form enctype="multipart/form-data"  action="/upload" method="post">
+            @csrf
+            <button type="submit">Upload</button>
+            <input name="src" type="file" multiple="false" " id=finput >
+        </form>
     </p>
 
 </div>
