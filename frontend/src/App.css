@@ -1,0 +1,24 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: rgb(219, 219, 219);
+}
+.box{
+  display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    margin: auto;
+    width: 80%;
+    row-gap: 1rem;
+}
+.box div{
+  display: flex;
+  flex-wrap: wrap;
+  width: fit-content;
+  background-color: #0021b1b5;
+  padding: 12px;
+  color: white;
+}

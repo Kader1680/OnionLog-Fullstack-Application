@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Data;
+use App\Models\Random;
 use Faker\Core\Number;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -18,7 +19,7 @@ class RandomsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('randoms')->insert([
+        Random::insert([
             'Name' => Str::random(10),
             'Iban' => str::random(10),
             

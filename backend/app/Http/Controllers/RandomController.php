@@ -3,17 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Models\Data;
+use App\Models\Random;
 use Illuminate\Http\Request;
 
 class RandomController extends Controller
 {
     
     public function getAllRandom(){
-        $data = data::all();
+        $data = Random::all();
+
         return response()->json([
             'status' => 200,
-            'data' => $data,
-            'error' => []
+            'error' => [],
+            'data' => $data
+            
         ]);
     }
 }
