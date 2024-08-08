@@ -1,0 +1,123 @@
+body {
+    background-color: #fff;
+   /*rgb(22, 160, 133);
+   */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+nav {
+    position: fixed;
+    left: -14em;
+    top: 0;
+    bottom: 0;
+    background-color: #4f514e5e;
+    border-right: 40px solid #104b57;
+    box-shadow: 4px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    cursor: pointer;
+}
+.icon {
+    left: 3.7em;
+    display: block;
+    font-size: 30pt;
+    color: #fff;
+    position: absolute;
+    text-decoration: none;
+    font-family: 'Carrois Gothic', sans-se  rif;
+}
+nav ul {
+    width: 14em;
+    list-style-type: none;
+    margin: 0;
+    padding: 1em;
+}
+nav ul li {
+    width: 100%;
+    text-align: left;
+    padding: 4px 4px;
+    margin-top: 5px;
+    background: transparent;
+    font-size: 20px;
+    float: left;
+}
+nav a:link, nav a:visited {
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    line-height: 2.5em;
+    text-indent: 10px;
+    text-decoration: none;
+    color: #727272;
+
+    border-radius: 4px;
+    outline: 0 none;
+}
+nav a:hover, nav a:focus {
+    color: #fff;
+    background-color: #4F514E;
+    text-shadow: 0 0 4px #fff;
+   /*box-shadow: inset 0 2px 2px #808080;
+   */
+}
+article, article:after, nav, nav * {
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+nav:hover {
+    left: 0;
+}
+nav:hover ~ article:after {
+    left: 60%;
+}
+article{
+    width:100%;
+    text-align:center;
+}
+h1 {
+    text-shadow: rgb(230, 230, 230) 1px 1px, rgb(230, 230, 230) 2px 2px, rgb(230, 230, 230) 3px 3px, rgb(230, 230, 230) 4px 4px, rgb(230, 230, 230) 5px 5px, rgb(230, 230, 230) 6px 6px, rgb(230, 230, 230) 7px 7px, rgb(230, 230, 230) 8px 8px, rgb(230, 230, 230) 9px 9px, rgb(230, 230, 230) 10px 10px, rgb(230, 230, 230) 11px 11px, rgb(230, 230, 230) 12px 12px, rgb(231, 231, 231) 13px 13px, rgb(232, 232, 232) 14px 14px, rgb(234, 234, 234) 15px 15px, rgb(235, 235, 235) 16px 16px, rgb(236, 236, 236) 17px 17px, rgb(238, 238, 238) 18px 18px, rgb(239, 239, 239) 19px 19px, rgb(241, 241, 241) 20px 20px, rgb(242, 242, 242) 21px 21px, rgb(243, 243, 243) 22px 22px, rgb(245, 245, 245) 23px 23px, rgb(246, 246, 246) 24px 24px, rgb(248, 248, 248) 25px 25px, rgb(249, 249, 249) 26px 26px, rgb(250, 250, 250) 27px 27px, rgb(252, 252, 252) 28px 28px, rgb(253, 253, 253) 29px 29px, rgb(255, 255, 255) 30px 30px;
+    color:#169CCF;
+    font-size: 75px;
+    text-align: center;
+}
+p{
+    text-align:left;
+    color: #576978;
+    list-style-type:none;
+    font-family: "freight-text-pro",Georgia,Cambria,"Times New Roman",Times,serif;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #677a82;
+}
+
+
+
+p {
+    font-size: 12pt;
+    color: black;
+  }
+  canvas {
+    height: 175px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+  }
+  
+  input {
+    font-family: verdana;
+    font-size: 12pt;
+  }
+
+
+.upload{
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #549dac;
+    color: white;
+    padding: 25px;
+    
+}
