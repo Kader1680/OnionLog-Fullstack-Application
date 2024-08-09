@@ -33,14 +33,14 @@ function App() {
   return (
 
     <div>
-         <div className=" grid grid-cols-5  ">
-         <div className=" col-span-1">
+         <div className=" md:grid md:grid-cols-5  ">
+         <div className=" md:col-span-1">
              <Navbar />
          </div>
-         <div className=" col-span-3">
+         <div className=" md:col-span-3">
              <Post />
          </div>
-         <div className=" col-span-1"> 
+         <div className=" md:col-span-1"> 
             <Target />
          </div>
             
