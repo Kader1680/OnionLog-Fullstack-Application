@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\RandomController;
+use App\Http\Controllers\VedioController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,6 +22,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::get('/data', [RandomController::class, "getAllRandom"]);
+Route::get('/all', [VedioController::class, "getVedio"]);
 
 
 // Route::get("/all")

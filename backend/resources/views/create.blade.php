@@ -11,12 +11,25 @@
     }
 </style>
 
-<div class="upload">
+{{-- <div class="upload">
     <p>
         <form enctype="multipart/form-data"  action="/upload" method="post">
             @csrf
             <button class="border-0 p-2 w-100" type="submit">Submit</button>
             <input name="src" type="file" multiple="false" " id=finput >
+        </form>
+    </p>
+
+</div>
+ --}}
+
+
+<div class="upload">
+    <p>
+        <form enctype="multipart/form-data"  action="/vedio" method="post">
+            @csrf
+            <button class="border-0 p-2 w-100" type="submit">Submst</button>
+            <input name="vedio" type="file" multiple="false"  id=finput >
         </form>
     </p>
 

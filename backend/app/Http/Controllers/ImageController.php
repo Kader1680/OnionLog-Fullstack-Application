@@ -12,22 +12,7 @@ class ImageController extends Controller
     
 
     public function store(Request $request)
-    {
-       
-      //save the data to the database
-      
-
-        
-        //   $requestData = $request->all();
-        //   $fileName = time().$request->file('src')->getClientOriginalName();
-        //   $path = $request->file('src')->storeAs('images', $fileName);
-        //   $requestData = [];
-        //   $requestData['src'] = "/storage/" . $path;
-        //   Image::create($requestData);
-          
-
-
-
+    { 
         $fil_extention = $request->src-> getClientOriginalExtension();
         $file_name = time().'.'.$fil_extention;
         $path = 'images';

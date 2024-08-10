@@ -23,7 +23,7 @@
     }
 </style>
 <div class="home ">
-    <article class="row" >
+    {{-- <article class="row" >
         @foreach ($images as $image)
         <div class="col-md-6 col-sm-12 box">
             <img  class="post" src="images/{{ ($image->src) }}" alt="" srcset="">
@@ -36,7 +36,14 @@
         </div>
         @endforeach
     
-     </article>
+     </article> --}}
+
+
+     @foreach($data as $row)
+        <video width="320" height="240" autoplay muted>
+        <source src="{{asset('upload')}}/{{$row->path}}" type="video/mp4">
+        </video>
+    @endforeach
 </div>
 
  @endsection

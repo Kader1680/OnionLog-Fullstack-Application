@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ImageController;
+use App\Http\Controllers\VedioController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [ImageController::class, "show"]);
+Route::get('/', [VedioController::class, "show"]);
  
 Route::post('/upload', [ImageController::class, "store"]);
+Route::post('/vedio', [VedioController::class, "store"]);
 Route::get('/create', [ImageController::class, "index"]);
 
 
