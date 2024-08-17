@@ -1,0 +1,54 @@
+
+services:
+  # Laravel Service
+  backend:
+    build:
+      context: ./backend
+    container_name: backend
+    volumes:
+      - ./backend:/var/www/html
+    ports:
+      - "8000:8000"  # or "80:8000" if you want to access via port 80
+    networks:
+      - app-network
+    depends_on:
+      - db  # Ensure the backend waits for the db to start
+
+  # React Service
+  frontend:
+    build:
+      context: ./frontend
+    container_name: frontend
+    volumes:
+      - ./frontend:/app
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+    depends_on:
+      - backend  # Ensure frontend waits for backend to start
+
+  # MySQL Service
+  db:
+    image: mysql:8.0
+    container_name: db
+    environment:
+      
+      MYSQL_DATABASE: 'inswal'
+      MYSQL_USER: 'oniologdb'
+      MYSQL_PASSWORD:   'onion1680'
+      MYSQL_ROOT_PASSWORD:   'onion1680'
+    ports:
+      - "3307:3306"  
+    volumes:
+      - dbdata:/var/lib/mysql
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    
+    driver: bridge
+
+volumes:
+  dbdata:

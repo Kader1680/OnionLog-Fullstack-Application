@@ -40,7 +40,7 @@ class VedioController extends Controller
 
     public function show(){
 
-        $data = DB::table("vedios")->get();
+        $data = Vedio::all();
         return view("home", compact("data"));
     }
 }

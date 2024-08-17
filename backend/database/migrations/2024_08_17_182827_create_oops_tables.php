@@ -13,10 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('randoms', function (Blueprint $table) {
+        Schema::create('oops_tables', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('iban');
             $table->timestamps();
         });
     }
@@ -28,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('randoms');
+        Schema::dropIfExists('oops_tables');
     }
 };

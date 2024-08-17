@@ -52,6 +52,7 @@ function App() {
     <div class="app md:flex   ">
        
         <Navbar />
+         
         <Routes>
         
                 <Route path="/" element={<Home />} />
