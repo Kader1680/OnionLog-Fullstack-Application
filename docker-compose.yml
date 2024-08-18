@@ -11,8 +11,14 @@ services:
       - "8000:8000"  # or "80:8000" if you want to access via port 80
     networks:
       - app-network
-    depends_on:
-      - db  # Ensure the backend waits for the db to start
+    environment:
+      - DB_CONNECTION=mysql
+      - DB_HOST=host.docker.internal
+      - DB_PORT=3306
+      - DB_DATABASE=inswal
+      - DB_USERNAME=oniologdb
+      - DB_PASSWORD=onion1680
+    # Ensure the backend waits for the db to start
 
   # React Service
   frontend:
@@ -29,21 +35,8 @@ services:
       - backend  # Ensure frontend waits for backend to start
 
   # MySQL Service
-  db:
-    image: mysql:8.0
-    container_name: db
-    environment:
-      
-      MYSQL_DATABASE: 'inswal'
-      MYSQL_USER: 'oniologdb'
-      MYSQL_PASSWORD:   'onion1680'
-      MYSQL_ROOT_PASSWORD:   'onion1680'
-    ports:
-      - "3307:3306"  
-    volumes:
-      - dbdata:/var/lib/mysql
-    networks:
-      - app-network
+   
+   
 
 networks:
   app-network:
