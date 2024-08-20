@@ -10,9 +10,11 @@ import { BrowserRouter, Routes, Route, Router} from 'react-router-dom';
 
 import { FaPlay, FaPause, FaVolumeUp, FaVolumeMute } from 'react-icons/fa';
 import VideoPlayer from "./components/vedioPlayer";
-import Home from "./components/home";
+import Home from "./pages/home";
 import CreateFile from "./pages/createFile";
 import UploadImage from "./components/uploadImage";
+import Login from "./pages/auth/login";
+import SignIn from "./pages/auth/signIn";
 function App() {
   
   const [datas, setdata] = useState([]);
@@ -61,6 +63,8 @@ function App() {
                 <Route path="/post" element={<Post  />} />
                 <Route path="/vedios" element={<VideoPlayer  />} />
                 <Route path="/upload" element={<CreateFile  />} />
+                <Route path="/login" element={<Login  />} />
+                <Route path="/signin" element={<SignIn  />} />
           
               
             

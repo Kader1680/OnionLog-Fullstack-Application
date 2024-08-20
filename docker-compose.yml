@@ -1,4 +1,3 @@
-
 services:
   # Laravel Service
   backend:
@@ -8,18 +7,18 @@ services:
     volumes:
       - ./backend:/var/www/html
     ports:
-      - "8000:8000"  # or "80:8000" if you want to access via port 80
+      - "8000:8000"
     networks:
       - app-network
     environment:
       - DB_CONNECTION=mysql
-      - DB_HOST=host.docker.internal
+      # - DB_HOST=mysql  # Use the service name as the host
+      # - DB_HOST=mysql  # Use the service name as the host
       - DB_PORT=3306
       - DB_DATABASE=inswal
       - DB_USERNAME=oniologdb
       - DB_PASSWORD=onion1680
-    # Ensure the backend waits for the db to start
-
+    
   # React Service
   frontend:
     build:
@@ -35,12 +34,23 @@ services:
       - backend  # Ensure frontend waits for backend to start
 
   # MySQL Service
-   
-   
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    volumes:
+      - dbdata:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: onion1680  # Change this to a secure password
+      MYSQL_DATABASE: inswal
+      MYSQL_USER: oniologdb
+      MYSQL_PASSWORD: onion1680
+    ports:
+      - "3306:3306"
+    networks:
+      - app-network
 
 networks:
   app-network:
-    
     driver: bridge
 
 volumes:

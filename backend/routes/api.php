@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\AuthControlller;
+use App\Http\Controllers\HomeControlller;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\RandomController;
 use App\Http\Controllers\VedioController;
 use Illuminate\Http\Request;
@@ -23,6 +26,15 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/data', [RandomController::class, "getAllRandom"]);
 Route::get('/all', [VedioController::class, "getVedio"]);
+
+Route::get('/posts', [PostController::class, "index"]);
+
+Route::post('/login', [AuthControlller::class, "login"]);
+Route::post('/signin', [AuthControlller::class, "signin"]);
+
+Route::post('/create', [PostController::class, "store"]);
+
+
 
 
 // Route::get("/all")

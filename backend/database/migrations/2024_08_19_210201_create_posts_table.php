@@ -13,7 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('oops_tables', function (Blueprint $table) {
+        Schema::create('posts', function (Blueprint $table) {
+      
+            $table->text('content');
+            $table->unsignedBigInteger('id_user');
+            $table->foreign('id_user')->references('id')->on('users')->cascadeOnDelete()->cascadeOnUpdate();
             $table->id();
             $table->timestamps();
         });
@@ -26,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('oops_tables');
+        Schema::dropIfExists('posts');
     }
 };
